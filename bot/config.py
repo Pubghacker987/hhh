@@ -20,7 +20,10 @@ class BotCommands:
   Clone = ['copy', 'clone']
   Delete = ['delete', 'del']
   EmptyTrash = ['emptyTrash']
-  YtDl = ['ytdl']
+  YtDl = ['ytdl']  
+  Audio_Arrange = ['audio' , 'audioarrange']
+  Bypass = ['bypass' , 'gp']
+  Settings = ['s' , 'setting']
 
 class Messages:
     START_MSG = "**[Hi there](https://youtu.be/sTQkY0UE20c) {}.**\n__I'm Google Drive Uploader Bot.You can use me to upload any file / video to Google Drive from direct link or Telegram Files.__\n__You can know more from /help.__"
