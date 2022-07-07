@@ -1,7 +1,7 @@
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram import Client
-
+from bot.config import Messages, BotCommands
 from pyrogram import Client, filters
 
 @Client.on_callback_query()
@@ -65,19 +65,19 @@ def cb_handler(client, query):
         return
     if query.data == "home":
         await query.message.edit_text(
-            text=Translation.START_TEXT.format(update.from_user.mention),
-            reply_markup=Translation.START_BUTTONS,
+            text=Messages.START_TEXT.format(update.from_user.mention),
+            reply_markup=Messages.START_BUTTONS,
             disable_web_page_preview=True
         )
     elif query.data == "help":
         await query.message.edit_text(
-            text=Translation.HELP_TEXT,
-            reply_markup=Translation.HELP_BUTTONS,
+            text=Messages.HELP_TEXT,
+            reply_markup=Messages.HELP_BUTTONS,
             disable_web_page_preview=True
         )
     elif query.data == "about":
         await query.message.edit_text(
-            text=Translation.ABOUT_TEXT,
-            reply_markup=Translation.ABOUT_BUTTONS,
+            text=Messages.ABOUT_TEXT,
+            reply_markup=Messages.ABOUT_BUTTONS,
             disable_web_page_preview=True
         )
