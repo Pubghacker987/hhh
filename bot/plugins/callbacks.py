@@ -63,7 +63,7 @@ def cb_handler(client, query):
             disable_web_page_preview=True
         )
         return
-    if query.data == "home":
+    elif query.data == "home":
         await query.message.edit_text(
             text=Messages.START_MSG.format(update.from_user.mention),
             reply_markup=Messages.START_BUTTONS,
@@ -81,3 +81,6 @@ def cb_handler(client, query):
             reply_markup=Messages.ABOUT_BUTTONS,
             disable_web_page_preview=True
         )
+    elif "close" in query.data:
+        await query.message.delete(True)
+        return
