@@ -1,3 +1,6 @@
+#@Tellybots
+
+
 import os
 import re
 import json
@@ -184,19 +187,7 @@ def _download(client, message):
       else:
         sent_message = message.reply_text('🕵️** zippy link error...**', quote=True)
 
-    if 'pornhub.com' in link:
-      link = message.text
-      LOGGER.info(f'YTDL:{user_id}: {link}')
-      sent_message.edit(Messages.DOWNLOADING.format(link))
-      result, file_path = utube_dl(link)
-      if result:
-        sent_message.edit(Messages.DOWNLOADED_SUCCESSFULLY.format(os.path.basename(file_path), humanbytes(os.path.getsize(file_path))))
-        msg = GoogleDrive(user_id).upload_file(file_path)
-        sent_message.edit(msg)
-        LOGGER.info(f'Deleteing: {file_path}')
-        os.remove(file_path)
-      else:
-        sent_message = message.reply_text('🕵️**PornHub Error**', quote=True)
+
     if 'youtu' in link:
       link = message.text
       LOGGER.info(f'YTDL:{user_id}: {link}')
@@ -209,7 +200,7 @@ def _download(client, message):
         LOGGER.info(f'Deleteing: {file_path}')
         os.remove(file_path)
       else:
-        sent_message = message.reply_text('🕵️**PornHub Error**', quote=True)
+        sent_message = message.reply_text('🕵️**Error Occurred**', quote=True)
     
     
    
@@ -227,7 +218,7 @@ def _telegram_file(client, message):
   elif message.photo:
   	file = message.photo
   	file.mime_type = "images/png"
-  	file.file_name = f"IMG-{user_id}-{message.message_id}.png"
+  	file.file_name = f"IMG-{user_id}-{message.id}.png"
   sent_message.edit(Messages.DOWNLOAD_TG_FILE.format(file.file_name, humanbytes(file.file_size), file.mime_type))
   LOGGER.info(f'Download:{user_id}: {file.file_id}')
   try:
