@@ -8,5 +8,5 @@ RUN pip3 install --upgrade pip setuptools
 
 RUN pip install -U -r requirements.txt
 
-# Starting Worker
+# Starting Worker directory
 CMD ["python3","-m","bot"]
