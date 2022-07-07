@@ -1,3 +1,5 @@
+#@TellyBots
+
 class config:
     BOT_TOKEN = ""
     APP_ID = ""
