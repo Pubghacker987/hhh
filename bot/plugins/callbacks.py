@@ -83,4 +83,4 @@ def cb_handler(client, query):
         )
     elif "close" in query.data:
         await query.message.delete(True)
-        return
+       
