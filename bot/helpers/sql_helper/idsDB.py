@@ -1,3 +1,6 @@
+#@Tellybots
+
+
 from sqlalchemy import Column, String, Numeric
 from bot.helpers.sql_helper import SESSION, BASE
 
