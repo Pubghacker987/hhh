@@ -46,7 +46,55 @@ class Messages:
         # Dont remove this ↓ if you respect developer.
         "**Developed by @viperadnan**"
         ]
+    ABOUT_MSG = """
+**Mʏ ɴᴀᴍᴇ** : [Audio arranger ʙᴏᴛ](http://t.me/TellyUploaderRobot)
 
+**Cʜᴀɴɴᴇʟ** : [Tᴇʟʟʏʙᴏᴛs](https://t.me/TellyBots)
+
+**Vᴇʀꜱɪᴏɴ** : [2.0 ʙᴇᴛᴀ](https://t.me/TellyUploaderRobot)
+
+**Sᴏᴜʀᴄᴇ** : [ᴄʟɪᴄᴋ ʜᴇʀᴇ](https://t.me/tellybots_digital)
+
+**Sᴇʀᴠᴇʀ** : [ʜᴇʀᴏᴋᴜ](https://heroku.com/)
+
+**Lᴀɴɢᴜᴀɢᴇ :** [Pʏᴛʜᴏɴ 3.10.5](https://www.python.org/)
+
+**Fʀᴀᴍᴇᴡᴏʀᴋ :** [ᴘʏʀᴏɢᴀᴍ 2.0.30](https://docs.pyrogram.org/)
+
+**Dᴇᴠᴇʟᴏᴘᴇʀ :** [Tᴇʟʟʏʙᴏᴛs](https://t.me/tellybots)
+
+**ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ :** [NᴀʏsᴀBᴏᴛs](https://t.me/NaysaBots)
+
+"""
+
+
+
+
+
+    START_BUTTONS = InlineKeyboardMarkup(
+        [[
+        InlineKeyboardButton('🏡 ʜᴏᴍᴇ', callback_data='home'),
+        InlineKeyboardButton('👨‍🚒 ᴀʙᴏᴜᴛ', callback_data='about')
+        ],[
+        InlineKeyboardButton('♨️ ᴄʟᴏsᴇ', callback_data='close')
+        ]]
+    )
+    HELP_BUTTONS = InlineKeyboardMarkup(
+        [[
+        InlineKeyboardButton('🏡 ʜᴏᴍᴇ', callback_data='home'),
+        InlineKeyboardButton('👨‍🚒 ᴀʙᴏᴜᴛ', callback_data='about')
+        ],[
+        InlineKeyboardButton('♨️ ᴄʟᴏsᴇ', callback_data='close')
+        ]]
+    )
+    ABOUT_BUTTONS = InlineKeyboardMarkup(
+        [[
+        InlineKeyboardButton('🏡 ʜᴏᴍᴇ', callback_data='home'),
+        InlineKeyboardButton('❔ ʜᴇʟᴘ', callback_data='help')
+        ],[
+        InlineKeyboardButton('♨️ ᴄʟᴏsᴇ', callback_data='close')
+        ]]
+    )
      
     RATE_LIMIT_EXCEEDED_MESSAGE = "❗ **Rate Limit Exceeded.**\n__User rate limit exceeded try after 24 hours.__"
     
