@@ -65,19 +65,19 @@ def cb_handler(client, query):
         return
     if query.data == "home":
         await query.message.edit_text(
-            text=Messages.START_TEXT.format(update.from_user.mention),
+            text=Messages.START_MSG.format(update.from_user.mention),
             reply_markup=Messages.START_BUTTONS,
             disable_web_page_preview=True
         )
     elif query.data == "help":
         await query.message.edit_text(
-            text=Messages.HELP_TEXT,
+            text=Messages.HELP_MSG,
             reply_markup=Messages.HELP_BUTTONS,
             disable_web_page_preview=True
         )
     elif query.data == "about":
         await query.message.edit_text(
-            text=Messages.ABOUT_TEXT,
+            text=Messages.ABOUT_MSG,
             reply_markup=Messages.ABOUT_BUTTONS,
             disable_web_page_preview=True
         )
