@@ -69,18 +69,22 @@ def cb_handler(client, query):
             reply_markup=Messages.START_BUTTONS,
             disable_web_page_preview=True
         )
+       return
     elif query.data == "help":
         await query.message.edit_text(
             text=Messages.HELP_MSG,
             reply_markup=Messages.HELP_BUTTONS,
             disable_web_page_preview=True
         )
+       return
     elif query.data == "about":
         await query.message.edit_text(
             text=Messages.ABOUT_MSG,
             reply_markup=Messages.ABOUT_BUTTONS,
             disable_web_page_preview=True
         )
+       return
     elif "close" in query.data:
         await query.message.delete(True)
+       return
        
