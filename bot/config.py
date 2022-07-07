@@ -1,5 +1,9 @@
 #@TellyBots
 
+
+import os
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+
 class config:
     BOT_TOKEN = ""
     APP_ID = ""
