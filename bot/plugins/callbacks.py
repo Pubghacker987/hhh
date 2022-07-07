@@ -63,3 +63,21 @@ def cb_handler(client, query):
             disable_web_page_preview=True
         )
         return
+    if query.data == "home":
+        await query.message.edit_text(
+            text=Translation.START_TEXT.format(update.from_user.mention),
+            reply_markup=Translation.START_BUTTONS,
+            disable_web_page_preview=True
+        )
+    elif query.data == "help":
+        await query.message.edit_text(
+            text=Translation.HELP_TEXT,
+            reply_markup=Translation.HELP_BUTTONS,
+            disable_web_page_preview=True
+        )
+    elif query.data == "about":
+        await query.message.edit_text(
+            text=Translation.ABOUT_TEXT,
+            reply_markup=Translation.ABOUT_BUTTONS,
+            disable_web_page_preview=True
+        )
