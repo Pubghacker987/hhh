@@ -10,6 +10,5 @@ async def start(bot, update):
 
     await update.reply_text(
         text=Messages.START_MSG.format(update.from_user.mention),
-        disable_web_page_preview=True,
-        reply_markup=Messages.START_BUTTONS
+        disable_web_page_preview=True
     )
