@@ -12,8 +12,8 @@ from vidmergebot.vars import Vars
 )
 async def start_bot(_, m: Message):
     return await m.reply_text(
-        Constants.start_msg.format(m.from_user.first_name, Vars.CAPTION),
-        reply_markup=ikb(Constants.start_kb),
+        Messages.START_MSG.format(m.from_user.first_name, Messages.CAPTION),
+        reply_markup=ikb(Messages.start_kb),
         disable_web_page_preview=True,
         quote=True,
     )
@@ -24,25 +24,10 @@ async def start_bot(_, m: Message):
 )
 async def help_bot(_, m: Message):
     return await m.reply_text(
-        Messages.page1_help,
-        reply_markup=ikb(Constants.page1_help_kb),
+        Messages.HELP_MSG,
+        reply_markup=ikb(Messages.page1_help_kb),
         disable_web_page_preview=True,
     )
 
 
-@Client.on_callback_query(filters.regex("^help_callback."))
-async def help_callback_func(_, q: CallbackQuery):
-    qdata = q.data.split(".")[1]
-    if qdata in ("start", "page1"):
-        await q.message.edit_text(
-            Constants.page1_help,
-            reply_markup=ikb(Constants.page1_help_kb),
-            disable_web_page_preview=True,
-        )
-    elif qdata == "page2":
-        await q.message.edit_text(
-            Constants.page2_help,
-            reply_markup=ikb(Constants.page2_help_kb),
-            disable_web_page_preview=True,
-        )
-    await q.answer()
+
