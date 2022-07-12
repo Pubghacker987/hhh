@@ -5,14 +5,14 @@ import os
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 class config:
-    BOT_TOKEN = ""
-    APP_ID = ""
-    API_HASH = ""
-    DATABASE_URL = ""
-    SUDO_USERS = "" # Sepearted by space.
+    BOT_TOKEN = "5401465831:AAFuKX_8cUldmG7YmmjwdyjswE_m-h6z5lc"
+    APP_ID = "8755370"
+    API_HASH = "54261233493bbc5bbf489146dd2909dc"
+    DATABASE_URL = "postgres://wcenlerrwqiaxl:d4361fd7e792aa811653ce641878715c60bfd93bdfafc73704722eb203d2cdb8@ec2-23-23-151-191.compute-1.amazonaws.com:5432/d3snlufvdh702f"
+    SUDO_USERS = "1463744219" # Sepearted by space.
     DOWNLOAD_DIRECTORY = "./downloads/"
-    G_DRIVE_CLIENT_ID = ""
-    G_DRIVE_CLIENT_SECRET = ""
+    G_DRIVE_CLIENT_ID = "202264815644.apps.googleusercontent.com"
+    G_DRIVE_CLIENT_SECRET = "X4Z3ca8xfWDb1Voo-F9a7ZxJ"
     SUPPORT_CHAT_LINK = ""
 
 
